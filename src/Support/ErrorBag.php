@@ -17,7 +17,7 @@ trait ErrorBag
     protected function createErrorBagForMessage($message)
     {
         return new MessageBag([
-            'message' => $message,
+            'verify' => $message,
         ]);
     }
 

@@ -76,6 +76,9 @@ class Authenticator extends Google2FA
                 throw new InvalidOneTimePassword('One Time Password cannot be empty.');
             }
         }
+        $password = is_array($password)
+            ? implode('', $password)
+            : $password;
 
         return $password;
     }
